@@ -28,6 +28,7 @@ function checkTime(i) {
     return i;
 };
 function startClock(){
+	// Local date invocation needed for updated time
 	var local_today = new Date();
 	
     var hours = local_today.getHours();
@@ -35,7 +36,8 @@ function startClock(){
 	var seconds = local_today.getSeconds();
     minutes = checkTime(minutes);
 	seconds = checkTime(seconds);
-    time_string = hours + ":" + minutes + ":" + seconds;
+    //time_string = hours + ":" + minutes + ":" + seconds;
+	time_string = hours + ":" + minutes;
     document.getElementById('time').innerHTML = time_string;
 	
 	var update = setTimeout(function(){startClock()}, 3000);
