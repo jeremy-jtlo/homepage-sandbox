@@ -26,11 +26,17 @@ document.getElementById('date').innerHTML = date_string;
 function checkTime(i) {
     if (i<10) {i = "0" + i};  // add zero in front of numbers < 10
     return i;
-}
+};
 function startClock(){
-    var hours = today.getHours();
-    var minutes = today.getMinutes();
+	var local_today = new Date();
+	
+    var hours = local_today.getHours();
+    var minutes = local_today.getMinutes();
+	var seconds = local_today.getSeconds();
     minutes = checkTime(minutes);
-    time_string = hours + ":" + minutes;
+	seconds = checkTime(seconds);
+    time_string = hours + ":" + minutes + ":" + seconds;
     document.getElementById('time').innerHTML = time_string;
+	
+	var update = setTimeout(function(){startClock()}, 3000);
 };
