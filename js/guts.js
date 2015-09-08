@@ -18,6 +18,8 @@ var month = today.getMonth();
 var day_of_month = today.getDate();
 var day_of_week = today.getDay();
 
+var global_hour = today.getHours();
+
 var date_string = day_names[day_of_week] + ", " + month_names[month] + " " + day_of_month;
 
 document.getElementById('date').innerHTML = date_string;
