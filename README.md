@@ -1,4 +1,6 @@
 # homepage-sandbox
+
+[![Join the chat at https://gitter.im/jeremy-jtlo/homepage-sandbox](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/jeremy-jtlo/homepage-sandbox?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 A simple web homepage for practice with CSS, HTML, and frameworks like Foundation.
 
 Current version:
