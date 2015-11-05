@@ -20,6 +20,43 @@ input, button, select, textarea, optgroup, option, a {
     font-weight: inherit;
 }
 
+/* dark theme override */
+html, body{
+	background-color: #222;
+}
+
+.panel{
+	border: none;
+	background-color: #333;
+	color: #eee;
+	text-align: center;
+	padding: 0.5rem;
+	margin-top: 0;
+}
+
+ img{
+	filter: grayscale(1) blur(0.1rem);
+	-webkit-filter: grayscale(1) blur(0.1rem);
+}
+
+ img:hover{
+	filter: none;
+	-webkit-filter: none;
+}
+
+#search-submit{
+	background-color: #222;
+}
+
+#search-submit:hover{
+	background-color: #666;
+}
+
+a:link{
+	color: gray;
+}
+
+
 /* custom-styling below */
 #search-icon{
 	-webkit-transform: rotate(315deg);
