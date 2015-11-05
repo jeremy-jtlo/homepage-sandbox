@@ -1,3 +1,23 @@
+/*custom font overrides*/
+html, body, form, fieldset, table, tr, td, img {
+    margin: 0;
+    padding: 0;
+    font-weight: light;
+    font-size: 0.9rem;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6{
+	font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+
+input, button, select, textarea, optgroup, option, a {
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: inherit;
+    font-style: inherit;
+    font-weight: inherit;
+}
+
 #search-icon{
 	-webkit-transform: rotate(315deg);
 	-moz-transform: rotate(315deg); 
