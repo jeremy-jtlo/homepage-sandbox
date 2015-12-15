@@ -2,7 +2,7 @@
 // All links stored as JSON
 // TODO: Make link editing user-friendly.
 
-// Icons: 'Font Awesome', 'Material Icons'
+// Icons: 'Font Awesome'
 
 icon_links = [
     {
@@ -20,8 +20,7 @@ icon_links = [
     {
         "name":"Messenger",
         "url":"https://www.messenger.com",
-        // MTL icon pack
-        "icon":"message"
+        "icon":"comments"
     }
 ];
 
