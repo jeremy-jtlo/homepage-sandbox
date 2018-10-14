@@ -1,2 +1,0 @@
-Deploying this to the .io page if it ever starts working
-http://stackoverflow.com/questions/40413392/deploy-a-simple-react-application-to-github-pages-so-much-trouble

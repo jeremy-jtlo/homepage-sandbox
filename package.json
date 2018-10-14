@@ -1,0 +1,28 @@
+{
+  "name": "home-sweet-homepage",
+  "version": "1.0.0",
+  "description": "A localhost replacement for your browser's \"new tab\" page",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jeremy-jtlo/homepage-sandbox.git"
+  },
+  "keywords": [
+    "js",
+    "homepage"
+  ],
+  "author": "Jeremy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jeremy-jtlo/homepage-sandbox/issues"
+  },
+  "homepage": "https://github.com/jeremy-jtlo/homepage-sandbox#readme",
+  "dependencies": {
+    "next": "^7.0.2",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2"
+  }
+}
