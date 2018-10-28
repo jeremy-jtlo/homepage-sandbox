@@ -1,0 +1,24 @@
+{
+  "name": "homepage-sandbox",
+  "version": "1.0.0",
+  "description": "A new tab override",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jeremy-jtlo/homepage-sandbox.git"
+  },
+  "author": "Jeremy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jeremy-jtlo/homepage-sandbox/issues"
+  },
+  "homepage": "https://github.com/jeremy-jtlo/homepage-sandbox#readme",
+  "dependencies": {
+    "next": "^7.0.2",
+    "react": "^16.6.0",
+    "react-dom": "^16.6.0"
+  }
+}
