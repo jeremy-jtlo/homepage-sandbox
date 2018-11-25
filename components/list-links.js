@@ -6,7 +6,7 @@ export default function ListLinks(props) {
   const {links, titleDest, title} = props;
 
   links.forEach((element) => {
-    linkElements.push(<li><a href={element.dest}>{element.key}</a></li>);
+    linkElements.push(<li key={element.key}><a href={element.dest}>{element.key}</a></li>);
   });
   return (
     <ul>
