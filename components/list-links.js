@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export default function HeaderDrop(props) {
+export default function ListLinks(props) {
   const linkElements = [];
   const {links, titleDest, title} = props;
 
@@ -16,7 +16,7 @@ export default function HeaderDrop(props) {
   );
 }
 
-HeaderDrop.propTypes = {
+ListLinks.propTypes = {
   links: PropTypes.arrayOf(PropTypes.shape({
     dest: PropTypes.string,
     key: PropTypes.string,

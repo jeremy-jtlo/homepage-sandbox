@@ -17,7 +17,7 @@
 
 import React from 'react';
 import Head from 'next/head';
-import HeaderDrop from '../components/headerdrop';
+import ListLinks from '../components/list-links';
 
 const mylinks = {
   titleDest: 'http://google.ca',
@@ -40,7 +40,7 @@ export default function Home() {
       </Head>
       <h1>H E L L O  W O R L D</h1>
       <a href={testlink1}>Test link component</a>
-      <HeaderDrop title={mylinks.title} titleDest={mylinks.titleDest} links={mylinks.sites} />
+      <ListLinks title={mylinks.title} titleDest={mylinks.titleDest} links={mylinks.sites} />
     </div>
   );
 }
