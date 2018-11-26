@@ -4,6 +4,8 @@
 /**
  * TODO: Find a css framework that I actually want to use
  * (Let's try to move away from bootstrap/foundation)
+ * 
+ * remember to use yarn run dev, not npm
  * https://semantic-ui.com/
  * https://bulma.io/
  * http://yeticss.com/
