@@ -19,6 +19,7 @@
 
 import React from 'react';
 import Head from 'next/head';
+import { Container } from 'semantic-ui-react';
 import ListLinks from '../components/list-links';
 
 const mylinks = {
@@ -35,14 +36,15 @@ const mylinks = {
 export default function Home() {
   const testlink1 = 'https://duckduckgo.com';
   return (
-    <div>
+    <Container>
       <Head>
         <title>Home Sweet Home(page)</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/semantic-ui@2.4.0/dist/semantic.min.css" />
       </Head>
       <h1>H E L L O  W O R L D</h1>
       <a href={testlink1}>Test link component</a>
       <ListLinks title={mylinks.title} titleDest={mylinks.titleDest} links={mylinks.sites} />
-    </div>
+    </Container>
   );
 }
