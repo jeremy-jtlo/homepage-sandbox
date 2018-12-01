@@ -1,20 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export default function ListLinks(props) {
-  const linkElements = [];
-  const {links, titleDest, title} = props;
-
-  links.forEach((element) => {
-    linkElements.push(<li key={element.key}><a href={element.dest}>{element.key}</a></li>);
-  });
-  return (
-    <ul>
-      <a href={titleDest}>{title}</a>
-      {linkElements}
-    </ul>
-  );
-}
+export const ListLinks = ({ links, titleDest, title }) => (
+  <ul>
+    <a href={titleDest}>{title}</a>
+    {
+      links.map(link => (
+        <li key={link.key}>
+          <a href={link.dest}>{link.key}</a>
+        </li>
+      ))
+    }
+  </ul>
+);
 
 ListLinks.propTypes = {
   links: PropTypes.arrayOf(PropTypes.shape({
@@ -23,4 +21,6 @@ ListLinks.propTypes = {
   })).isRequired,
   title: PropTypes.string.isRequired,
   titleDest: PropTypes.string.isRequired,
-}
+};
+
+export default ListLinks;
