@@ -51,6 +51,7 @@ export default function Home() {
         <title>Home Sweet Home(page)</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/semantic-ui@2.4.0/dist/semantic.min.css" />
+        <link rel="stylesheet" type="text/css" href="../static/main.css" />
       </Head>
 
       {/* First Row */}

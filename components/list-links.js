@@ -1,17 +1,24 @@
+import { List, Card } from 'semantic-ui-react';
 import React from 'react';
 import PropTypes from 'prop-types';
 
 const ListLinks = ({ links, titleDest, title }) => (
-  <ul>
-    <a href={titleDest}>{title}</a>
-    {
-      links.map(link => (
-        <li key={link.key}>
-          <a href={link.dest}>{link.key}</a>
-        </li>
-      ))
-    }
-  </ul>
+  <Card>
+    <Card.Header><a href={titleDest}>{title}</a></Card.Header>
+    <List divided relaxed>
+      {
+        links.map(link => (
+          <List.Item key={link.key}>
+            <List.Content>
+              <List.Description as="a" href={link.dest}>
+                {link.key}
+              </List.Description>
+            </List.Content>
+          </List.Item>
+        ))
+      }
+    </List>
+  </Card>
 );
 
 ListLinks.propTypes = {
