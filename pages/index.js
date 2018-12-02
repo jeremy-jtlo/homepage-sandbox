@@ -4,7 +4,7 @@
 /**
  * TODO: Find a css framework that I actually want to use
  * (Let's try to move away from bootstrap/foundation)
- * 
+ *
  * remember to use yarn run dev, not npm
  * https://semantic-ui.com/
  * https://bulma.io/
@@ -19,22 +19,32 @@
 
 import React from 'react';
 import Head from 'next/head';
-import { Container } from 'semantic-ui-react';
+import { Container, Grid } from 'semantic-ui-react';
 import ListLinks from '../components/list-links';
 
-const mylinks = {
-  titleDest: 'http://google.ca',
-  title: 'This is my list',
+const redditLinks = {
+  titleDest: 'https://reddit.com',
+  title: 'Reddit',
   sites: [
-    { dest: 'http://reddit.com', key: 'reddit' },
-    { dest: 'http://reddit.com/r/kappa', key: 'Kappa' },
-    { dest: 'http://reddit.com/r/monsterhunter', key: 'MonsterHunter' },
-    { dest: 'http://reddit.com/r/salty', key: 'Salty' },
+    { dest: 'https://reddit.com/r/programmerhumor', key: 'Programmer Humor' },
+    { dest: 'https://reddit.com/r/kappa', key: 'Kappa' },
+    { dest: 'https://reddit.com/r/monsterhunter', key: 'MonsterHunter' },
+    { dest: 'https://reddit.com/r/salty', key: 'Salty' },
+  ],
+};
+
+const fourChLinks = {
+  titleDest: 'https://4chan.org',
+  title: '4chan',
+  sites: [
+    { dest: 'https://4chan.org/a/', key: '/a/ - Anime' },
+    { dest: 'https://4chan.org/g/', key: '/g/ - Technology' },
+    { dest: 'https://4chan.org/o/', key: '/o/ - Automotive' },
+    { dest: 'https://4chan.org/v/', key: '/v/ - Videogames' },
   ],
 };
 
 export default function Home() {
-  const testlink1 = 'https://duckduckgo.com';
   return (
     <Container>
       <Head>
@@ -42,9 +52,33 @@ export default function Home() {
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/semantic-ui@2.4.0/dist/semantic.min.css" />
       </Head>
-      <h1>H E L L O  W O R L D</h1>
-      <a href={testlink1}>Test link component</a>
-      <ListLinks title={mylinks.title} titleDest={mylinks.titleDest} links={mylinks.sites} />
+
+      {/* First Row */}
+      <Grid stackable columns={2}>
+        {/* Site Links */}
+        <Grid.Column width={8}>
+          <Grid columns={2}>
+            <Grid.Column>
+              <ListLinks
+                title={redditLinks.title}
+                titleDest={redditLinks.titleDest}
+                links={redditLinks.sites}
+              />
+            </Grid.Column>
+            <Grid.Column>
+              <ListLinks
+                title={fourChLinks.title}
+                titleDest={fourChLinks.titleDest}
+                links={fourChLinks.sites}
+              />
+            </Grid.Column>
+          </Grid>
+        </Grid.Column>
+        {/* Some kind of media widget, I don't know */}
+        <Grid.Column width={8}>
+          <div><p>TEST TEXT</p></div>
+        </Grid.Column>
+      </Grid>
     </Container>
   );
 }

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export const ListLinks = ({ links, titleDest, title }) => (
+const ListLinks = ({ links, titleDest, title }) => (
   <ul>
     <a href={titleDest}>{title}</a>
     {
