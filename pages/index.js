@@ -19,7 +19,7 @@
 
 import React from 'react';
 import Head from 'next/head';
-import { Container, Grid } from 'semantic-ui-react';
+import { Container, Grid, Header } from 'semantic-ui-react';
 import ListLinks from '../components/list-links';
 import AppGrid from '../components/app-grid';
 
@@ -68,11 +68,14 @@ export default function Home() {
         <link rel="stylesheet" type="text/css" href="../static/main.css" />
       </Head>
 
+      {/* Header, Info */}
+      <Header as="h1">Home Sweet Home(page)</Header>
+
       {/* First Row */}
-      <Grid stackable columns={2}>
+      <Grid stackable columns={2} stretched>
         {/* Site Links */}
         <Grid.Column width={8}>
-          <Grid columns={2}>
+          <Grid columns={2} stretched>
             <Grid.Column>
               <ListLinks
                 title={redditLinks.title}

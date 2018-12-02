@@ -1,20 +1,23 @@
-import { Grid, Card, Segment } from 'semantic-ui-react';
+import { Grid, Card, Icon } from 'semantic-ui-react';
 import React from 'react';
 import PropTypes from 'prop-types';
 
 const AppGrid = ({ apps }) => (
-  <Card>
+  <Card id="apps">
     <Card.Header>Applications</Card.Header>
-    <Grid columns="equal">
+    <Grid>
       {
         apps.map(appArray => (
-          <Grid.Column width={8} key={appArray[0].icon}>
+          <Grid.Row stretched key={appArray[0].icon}>
             {
             appArray.map(app => (
-              <Segment key={app.name}>{app.name}</Segment>
+              <Grid.Column width={5} as="a" href={app.dest} key={app.name}>
+                <Icon name={app.icon} size="large" />
+                {app.name}
+              </Grid.Column>
             ))
             }
-          </Grid.Column>
+          </Grid.Row>
         ))
     }
     </Grid>
