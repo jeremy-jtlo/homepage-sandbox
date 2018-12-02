@@ -21,6 +21,7 @@ import React from 'react';
 import Head from 'next/head';
 import { Container, Grid } from 'semantic-ui-react';
 import ListLinks from '../components/list-links';
+import AppGrid from '../components/app-grid';
 
 const redditLinks = {
   titleDest: 'https://reddit.com',
@@ -43,6 +44,19 @@ const fourChLinks = {
     { dest: 'https://4chan.org/v/', key: '/v/ - Videogames' },
   ],
 };
+
+const appList = [
+  [
+    { icon: 'facebook', name: 'facebook', dest: 'https://facebook.com' },
+    { icon: 'facebook messenger', name: 'messenger', dest: 'https://messenger.com' },
+    { icon: 'twitter', name: 'twitter', dest: 'https://twitter.com' }
+  ],
+  [
+    { icon: 'whatsapp', name: 'whatsapp', dest: 'https://web.whatsapp.com' },
+    { icon: 'discord', name: 'discord', dest: 'https://discordapp.com' },
+    { icon: 'mail', name: 'gmail', dest: 'https://gmail.com' }
+  ],
+];
 
 export default function Home() {
   return (
@@ -77,7 +91,7 @@ export default function Home() {
         </Grid.Column>
         {/* Some kind of media widget, I don't know */}
         <Grid.Column width={8}>
-          <div><p>TEST TEXT</p></div>
+          <AppGrid apps={appList} />
         </Grid.Column>
       </Grid>
     </Container>
