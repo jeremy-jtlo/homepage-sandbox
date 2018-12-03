@@ -22,6 +22,7 @@ import Head from 'next/head';
 import { Container, Grid, Header } from 'semantic-ui-react';
 import ListLinks from '../components/list-links';
 import AppGrid from '../components/app-grid';
+import WeatherHeader from '../components/weather-header';
 
 const redditLinks = {
   titleDest: 'https://reddit.com',
@@ -70,6 +71,7 @@ export default function Home() {
 
       {/* Header, Info */}
       <Header as="h1">Home Sweet Home(page)</Header>
+      <WeatherHeader />
 
       {/* First Row */}
       <Grid stackable columns={2} stretched>
