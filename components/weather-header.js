@@ -1,15 +1,19 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import fetch from 'isomorphic-unfetch';
 
 class WeatherHeader extends Component {
-  constructor() {
+  constructor(props) {
     super();
+    const { cityKey, apiKey } = props;
+    let api = 'http://dataservice.accuweather.com/currentconditions/v1/';
+    api += `${cityKey}?apikey=${apiKey}&language=en-us`;
+    this.endPoint = api;
     this.state = { data: [] };
   }
 
   componentDidMount() {
-    // TODO: Replace this with some kind of working API
-    fetch('https://www.google.com')
+    fetch(this.endPoint)
       .then(res => res.json())
       .then(json => (this.setState({ data: json })));
   }
@@ -22,5 +26,10 @@ class WeatherHeader extends Component {
     );
   }
 }
+
+WeatherHeader.propTypes = {
+  cityKey: PropTypes.string.isRequired,
+  apiKey: PropTypes.string.isRequired,
+};
 
 export default WeatherHeader;

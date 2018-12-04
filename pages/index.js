@@ -24,6 +24,12 @@ import ListLinks from '../components/list-links';
 import AppGrid from '../components/app-grid';
 import WeatherHeader from '../components/weather-header';
 
+// Burnaby BC, CA key: 47172
+const city = '47172';
+
+// UI cannot pick up on this variable, for some reason
+const myKey = process.env.WEATHER_KEY;
+
 const redditLinks = {
   titleDest: 'https://reddit.com',
   title: 'Reddit',
@@ -71,7 +77,7 @@ export default function Home() {
 
       {/* Header, Info */}
       <Header as="h1">Home Sweet Home(page)</Header>
-      <WeatherHeader />
+      <WeatherHeader cityKey={city} apiKey={myKey} />
 
       {/* First Row */}
       <Grid stackable columns={2} stretched>
