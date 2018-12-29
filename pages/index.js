@@ -109,6 +109,7 @@ export default function Home() {
         <Grid.Column width={8}>
           <AppGrid apps={appList} />
         </Grid.Column>
+        {/* TODO: a news feed, daily phrase, something else */}
       </Grid>
     </Container>
   );
