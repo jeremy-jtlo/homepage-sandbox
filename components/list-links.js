@@ -10,7 +10,7 @@ const ListLinks = ({ links, titleDest, title }) => (
         links.map(link => (
           <List.Item key={link.key}>
             <List.Content>
-              <List.Description as="a" href={link.dest}>
+              <List.Description as="a" target="blank" href={link.dest}>
                 {link.key}
               </List.Description>
             </List.Content>

@@ -18,6 +18,7 @@ h1.ui.header {
 
 #apps .row {
   text-align: center;
+  line-height: 2.5rem;
 }
 
 #apps a.five.wide.column {
@@ -26,4 +27,5 @@ h1.ui.header {
 
 #apps i.large.icon {
   flex-grow: 0;
+  align-self: center;
 }

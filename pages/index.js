@@ -22,22 +22,18 @@ import Head from 'next/head';
 import { Container, Grid, Header } from 'semantic-ui-react';
 import ListLinks from '../components/list-links';
 import AppGrid from '../components/app-grid';
-import WeatherHeader from '../components/weather-header';
-
-// Burnaby BC, CA key: 47172
-const city = '47172';
-
-// UI cannot pick up on this variable, for some reason
-const myKey = process.env.WEATHER_KEY;
 
 const redditLinks = {
   titleDest: 'https://reddit.com',
   title: 'Reddit',
   sites: [
-    { dest: 'https://reddit.com/r/programmerhumor', key: 'Programmer Humor' },
+    { dest: 'https://reddit.com/r/gunpla', key: 'Gunpla' },
     { dest: 'https://reddit.com/r/kappa', key: 'Kappa' },
+    { dest: 'https://reddit.com/r/programmerhumor', key: 'Programmer Humor' },
+    { dest: 'https://reddit.com/r/puzzleanddragons', key: 'Puzzle & Dragons' },
     { dest: 'https://reddit.com/r/monsterhunter', key: 'MonsterHunter' },
     { dest: 'https://reddit.com/r/salty', key: 'Salty' },
+    { dest: 'https://reddit.com/r/warframe', key: 'Warframe' },
   ],
 };
 
@@ -47,6 +43,7 @@ const fourChLinks = {
   sites: [
     { dest: 'https://4chan.org/a/', key: '/a/ - Anime' },
     { dest: 'https://4chan.org/g/', key: '/g/ - Technology' },
+    { dest: 'https://4chan.org/o/', key: '/mu/ - Music' },
     { dest: 'https://4chan.org/o/', key: '/o/ - Automotive' },
     { dest: 'https://4chan.org/v/', key: '/v/ - Videogames' },
   ],
@@ -56,12 +53,17 @@ const appList = [
   [
     { icon: 'facebook', name: 'facebook', dest: 'https://facebook.com' },
     { icon: 'facebook messenger', name: 'messenger', dest: 'https://messenger.com' },
-    { icon: 'twitter', name: 'twitter', dest: 'https://twitter.com' }
+    { icon: 'twitter', name: 'twitter', dest: 'https://twitter.com' },
   ],
   [
     { icon: 'whatsapp', name: 'whatsapp', dest: 'https://web.whatsapp.com' },
     { icon: 'discord', name: 'discord', dest: 'https://discordapp.com' },
-    { icon: 'mail', name: 'gmail', dest: 'https://gmail.com' }
+    { icon: 'mail', name: 'gmail', dest: 'https://gmail.com' },
+  ],
+  [
+    { icon: 'paw', name: 'mhgu', dest: 'https://mhgu.kirnico.com' },
+    { icon: 'world', name: 'mhw', dest: 'https://mhworld.kiranico.com' },
+    { icon: 'wikipedia w', name: 'gentoo', dest: 'https://wiki.installgentoo.com/index.php/Main_Page' },
   ],
 ];
 
@@ -77,7 +79,6 @@ export default function Home() {
 
       {/* Header, Info */}
       <Header as="h1">Home Sweet Home(page)</Header>
-      <WeatherHeader cityKey={city} apiKey={myKey} />
 
       {/* First Row */}
       <Grid stackable columns={2} stretched>

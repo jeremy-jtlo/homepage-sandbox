@@ -4,14 +4,14 @@ import PropTypes from 'prop-types';
 
 const AppGrid = ({ apps }) => (
   <Card id="apps">
-    <Card.Header>Applications</Card.Header>
+    <Card.Header>Other</Card.Header>
     <Grid>
       {
         apps.map(appArray => (
           <Grid.Row stretched key={appArray[0].icon}>
             {
             appArray.map(app => (
-              <Grid.Column width={5} as="a" href={app.dest} key={app.name}>
+              <Grid.Column width={5} as="a" target="blank" href={app.dest} key={app.name}>
                 <Icon name={app.icon} size="large" />
                 {app.name}
               </Grid.Column>
