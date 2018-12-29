@@ -4,7 +4,14 @@
 }
 
 h1.ui.header {
-  margin: 1.5em 0 !important;
+  /* The semantic sheet is a thorn in my side */
+  margin: 1em 0 0 0 !important;
+}
+
+h3.ui.header {
+  color: #888888;
+  font-weight: 300;
+  margin-top: 0;
 }
 
 /* For the App Grid */

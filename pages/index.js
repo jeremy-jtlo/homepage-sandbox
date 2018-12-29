@@ -22,6 +22,7 @@ import Head from 'next/head';
 import { Container, Grid, Header } from 'semantic-ui-react';
 import ListLinks from '../components/list-links';
 import AppGrid from '../components/app-grid';
+import SubHeader from '../components/subheader';
 
 const redditLinks = {
   titleDest: 'https://reddit.com',
@@ -46,6 +47,8 @@ const fourChLinks = {
     { dest: 'https://4chan.org/o/', key: '/mu/ - Music' },
     { dest: 'https://4chan.org/o/', key: '/o/ - Automotive' },
     { dest: 'https://4chan.org/v/', key: '/v/ - Videogames' },
+    { dest: 'https://4chan.org/vg/', key: '/vg/ - Vidya General' },
+    { dest: 'https://4chan.org/wg/', key: '/wg/ - Wallpapers' },
   ],
 };
 
@@ -61,7 +64,7 @@ const appList = [
     { icon: 'mail', name: 'gmail', dest: 'https://gmail.com' },
   ],
   [
-    { icon: 'paw', name: 'mhgu', dest: 'https://mhgu.kirnico.com' },
+    { icon: 'paw', name: 'mhgu', dest: 'https://mhgu.kiranico.com' },
     { icon: 'world', name: 'mhw', dest: 'https://mhworld.kiranico.com' },
     { icon: 'wikipedia w', name: 'gentoo', dest: 'https://wiki.installgentoo.com/index.php/Main_Page' },
   ],
@@ -79,6 +82,7 @@ export default function Home() {
 
       {/* Header, Info */}
       <Header as="h1">Home Sweet Home(page)</Header>
+      <SubHeader time={new Date()} />
 
       {/* First Row */}
       <Grid stackable columns={2} stretched>
