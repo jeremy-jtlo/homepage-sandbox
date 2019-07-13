@@ -14,7 +14,7 @@ function generateTimeString(time) {
   const dayOfMonth = time.getDate();
   const dayName = time.getDay();
 
-  const dateString = `${dayNames[dayName]}, ${monthNames[thisMonth]}${dayOfMonth}`;
+  const dateString = `${dayNames[dayName]}, ${monthNames[thisMonth]} ${dayOfMonth}`;
 
   return dateString;
 }
