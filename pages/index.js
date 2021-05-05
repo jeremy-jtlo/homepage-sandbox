@@ -29,43 +29,43 @@ const redditLinks = {
   title: 'Reddit',
   sites: [
     { dest: 'https://reddit.com/r/gunpla', key: 'Gunpla' },
-    { dest: 'https://reddit.com/r/kappa', key: 'Kappa' },
+    { dest: 'https://reddit.com/r/vancouver', key: 'Vancouver' },
     { dest: 'https://reddit.com/r/programmerhumor', key: 'Programmer Humor' },
-    { dest: 'https://reddit.com/r/puzzleanddragons', key: 'Puzzle & Dragons' },
+    { dest: 'https://reddit.com/r/Genshin_Impact', key: 'Genshin Impact' },
     { dest: 'https://reddit.com/r/monsterhunter', key: 'MonsterHunter' },
     { dest: 'https://reddit.com/r/salty', key: 'Salty' },
     { dest: 'https://reddit.com/r/warframe', key: 'Warframe' },
   ],
 };
 
-const fourChLinks = {
-  titleDest: 'https://4chan.org',
-  title: '4chan',
+const newsLinks = {
+  titleDest: 'https://news.google.com',
+  title: 'News',
   sites: [
-    { dest: 'https://4chan.org/a/', key: '/a/ - Anime' },
-    { dest: 'https://4chan.org/g/', key: '/g/ - Technology' },
-    { dest: 'https://4chan.org/o/', key: '/mu/ - Music' },
-    { dest: 'https://4chan.org/o/', key: '/o/ - Automotive' },
-    { dest: 'https://4chan.org/v/', key: '/v/ - Videogames' },
-    { dest: 'https://4chan.org/vg/', key: '/vg/ - Vidya General' },
-    { dest: 'https://4chan.org/wg/', key: '/wg/ - Wallpapers' },
+    { dest: 'https://bc.ctvnews.ca/', key: 'CTV News BC' },
+    { dest: 'https://www.cbc.ca/news/canada/british-columbia', key: 'CBC News BC' },
+    { dest: 'https://globalnews.ca/bc/', key: 'Global News BC' },
+    { dest: 'https://en.wikinews.org/wiki/Main_Page', key: 'Wiki News' },
+    { dest: 'https://www.reuters.com/', key: 'Reuters' },
+    { dest: 'https://arstechnica.com/', key: 'Ars Technica' },
+    { dest: 'https://www.economist.com/', key: 'The Economist' },
   ],
 };
 
 const appList = [
   [
-    { icon: 'facebook', name: 'facebook', dest: 'https://facebook.com' },
+    { icon: 'youtube', name: 'youtube', dest: 'https://www.youtube.com/' },
     { icon: 'facebook messenger', name: 'messenger', dest: 'https://messenger.com' },
     { icon: 'twitter', name: 'twitter', dest: 'https://twitter.com' },
   ],
   [
     { icon: 'whatsapp', name: 'whatsapp', dest: 'https://web.whatsapp.com' },
     { icon: 'discord', name: 'discord', dest: 'https://discordapp.com' },
-    { icon: 'mail', name: 'gmail', dest: 'https://gmail.com' },
+    { icon: 'telegram', name: 'telegram', dest: 'https://web.telegram.org' },
   ],
   [
-    { icon: 'paw', name: 'mhgu', dest: 'https://mhgu.kiranico.com' },
-    { icon: 'world', name: 'mhw', dest: 'https://mhworld.kiranico.com' },
+    { icon: 'mail', name: 'gmail', dest: 'https://gmail.com' },
+    { icon: 'paw', name: 'mhrise', dest: 'https://mhrise.kiranico.com/' },
     { icon: 'wikipedia w', name: 'gentoo', dest: 'https://wiki.installgentoo.com/index.php/Main_Page' },
   ],
 ];
@@ -98,9 +98,9 @@ export default function Home() {
             </Grid.Column>
             <Grid.Column>
               <ListLinks
-                title={fourChLinks.title}
-                titleDest={fourChLinks.titleDest}
-                links={fourChLinks.sites}
+                title={newsLinks.title}
+                titleDest={newsLinks.titleDest}
+                links={newsLinks.sites}
               />
             </Grid.Column>
           </Grid>
