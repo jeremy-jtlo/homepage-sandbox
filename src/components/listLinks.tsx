@@ -1,6 +1,5 @@
 import { List, Card } from "semantic-ui-react";
 import { siteLink } from "../constants/links";
-import React from "react";
 
 export type ListLinksProps = {
   links: siteLink[];

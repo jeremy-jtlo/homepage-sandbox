@@ -1,5 +1,3 @@
-import React from "react";
-import logo from "./logo.svg";
 import { apps, newsLinks, redditLinks } from "./constants/links";
 import { Container, Grid, Header } from "semantic-ui-react";
 import ListLinks from "./components/listLinks";
@@ -34,11 +32,9 @@ const App = () => (
           </Grid.Column>
         </Grid>
       </Grid.Column>
-      {/* Some kind of media widget, I don't know */}
       <Grid.Column width={8}>
         <AppGrid apps={apps} />
       </Grid.Column>
-      {/* TODO: a news feed, daily phrase, something else */}
     </Grid>
   </Container>
 );
