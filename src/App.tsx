@@ -1,5 +1,6 @@
 import React from "react";
 import logo from "./logo.svg";
+import { apps, newsLinks, redditLinks } from "./constants/links";
 import "./App.css";
 
 const App = () => (
@@ -9,6 +10,9 @@ const App = () => (
       <p>
         Edit <code>src/App.tsx</code> and save to reload.
       </p>
+      <p>here is the first app: {apps[0][0].name}</p>
+      <p>here is the first news: {newsLinks.sites[0].key}</p>
+      <p>here is the first reddit: {redditLinks.sites[0].key}</p>
       <a
         className="App-link"
         href="https://reactjs.org"
