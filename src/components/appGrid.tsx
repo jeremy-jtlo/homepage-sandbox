@@ -13,13 +13,7 @@ export default function AppGrid({ apps }: AppGridProps) {
         {apps.map((appArray) => (
           <Grid.Row stretched key={appArray[0].icon}>
             {appArray.map((app) => (
-              <Grid.Column
-                width={5}
-                as="a"
-                target="blank"
-                href={app.dest}
-                key={app.name}
-              >
+              <Grid.Column width={5} as="a" href={app.dest} key={app.name}>
                 <Icon name={app.icon as SemanticICONS} size="large" />
                 {app.name}
               </Grid.Column>
