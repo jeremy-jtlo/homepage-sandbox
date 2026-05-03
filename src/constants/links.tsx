@@ -76,13 +76,13 @@ export const redditLinks: linkBatch = {
  */
 export const apps: appList[] = [
   [
-    { icon: "youtube", name: "youtube", dest: "https://www.youtube.com/" },
+    { icon: "youtube", name: "youtube", dest: "https://www.youtube.com/feed/subscriptions" },
     { icon: "twitch", name: "twitch", dest: "https://twitch.tv" },
     { icon: "twitter", name: "bluesky", dest: "https://bsky.app" },
   ],
   [
     { icon: "whatsapp", name: "whatsapp", dest: "https://web.whatsapp.com" },
-    { icon: "discord", name: "discord", dest: "https://discordapp.com" },
+    { icon: "discord", name: "discord", dest: "https://discord.com/app" },
     { icon: "telegram", name: "telegram", dest: "https://web.telegram.org" },
   ],
   [
